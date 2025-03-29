@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给爸爸的信 - 时光里的成长</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background"></div>
+    
+    <!-- 信封开场效果 -->
+    <div class="envelope-container" id="envelope-container">
+        <div class="envelope">
+            <div class="envelope-front">
+                <i class="fas fa-envelope-open-text envelope-icon"></i>
+                <h2 class="envelope-title">给爸爸的信</h2>
+                <p class="tap-hint">点击打开信封</p>
+            </div>
+            <div class="envelope-back">
+                <div class="envelope-seal"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 过渡动画 -->
+    <div class="transition-overlay" id="transition-overlay">
+        <div class="transition-loader"></div>
+    </div>
+    
+    <div class="container">
+        <header class="header animate__animated animate__fadeIn">
+            <h1>给爸爸的信</h1>
+            <p>时光里的成长足迹</p>
+            <div class="music-player">
+                <div class="music-info">
+                    <span id="music-title">温馨背景音乐</span>
+                </div>
+                <div class="player-controls">
+                    <button id="play-pause-btn" class="player-btn ripple-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="volume-container">
+                        <i class="fas fa-volume-up volume-icon"></i>
+                        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.7">
+                    </div>
+                </div>
+                <audio id="background-music" loop>
+                    <source src="music/Brian Crain - Song for Sienna.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </header>
+        
+        <div class="scene-container animate__animated animate__fadeIn">
+            <div class="scene-image-container">
+                <img id="scene-image" src="images/1.场景1_剪指甲.png" alt="场景1">
+            </div>
+            <div class="scene-text-container">
+                <h2 id="scene-title">剪指甲</h2>
+                <p id="scene-description" class="animate__animated animate__fadeIn">我们一起度过的美好时光，从最初的日常小事开始...</p>
+            </div>
+        </div>
+        
+        <div class="timeline-container">
+            <div class="timeline">
+                <div class="timeline-item active" data-scene="1" data-title="剪指甲">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>我出生了</h3>
+                        <p>第一次剪指甲</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scene="2" data-title="浴缸里的战争">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>一岁</h3>
+                        <p>第一次浴缸里打海仗</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scene="3" data-title="骑自行车">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>两岁</h3>
+                        <p>第一次学骑自行车</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scene="4" data-title="骑大马">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>三岁</h3>
+                        <p>第一次骑大马</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scene="5" data-title="北欧旅行">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>四岁</h3>
+                        <p>第一次去北欧旅行</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scene="6" data-title="上小学">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>六岁</h3>
+                        <p>上小学第一天</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scene="7" data-title="医院">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>八岁</h3>
+                        <p>第一次住院</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scene="8" data-title="接弟弟放学">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>九岁</h3>
+                        <p>第一次接弟弟放学</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scene="9" data-title="上海机器人比赛和迪士尼的生日">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>十岁</h3>
+                        <p>第一次在迪士尼过生日</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scene="10" data-title="跳蚤市场">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>十一岁</h3>
+                        <p>第一次在跳蚤市场当老板</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scene="11" data-title="永不迷航的爱">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>爸爸，我想对你说</h3>
+                        <p>你是我永不迷航的B-612星球</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 最终的信件 -->
+        <div class="final-letter" id="final-letter">
+            <div class="letter-paper">
+                <div class="letter-header">
+                    <h2>《父爱是永不迷航的B-612星球》</h2>
+                    <div class="letter-date">2023年7月19日</div>
+                </div>
+                <div class="letter-content text-left">
+                    <div class="letter-section animate__animated animate__fadeIn">
+                        <h3>一、小王子的星球上有座环形山</h3>
+                        <p>医院的消毒水味道像黏糊糊的蜘蛛网，我蜷缩在病床上数手背的针眼，三天前爸爸背我下山时，他的汗珠一颗颗砸在石阶上，洇出的水渍像小王子星球上的火山口。此刻他正用棉签蘸温水给我擦嘴唇，掌心的老茧刮得我痒痒的："玫瑰花长刺是怕虫子咬，就像你总说不疼，可睫毛都哭成蝴蝶翅膀了。"</p>
+                        <p>监护仪的绿光在夜里跳踢踏舞时，我摸到他后颈的松针碎屑——那是背我下山时沾的。原来他裤脚破洞里的血痂不是树杈划的，是跪着背我时被碎石硌的。我突然想起《小王子》里的话："真正重要的东西，眼睛是看不见的。"</p>
+                    </div>
+                    
+                    <div class="letter-section animate__animated animate__fadeIn">
+                        <h3>二、狐狸教我们种麦田</h3>
+                        <p>爸爸学会用葡萄糖瓶热牛奶的第七天，窗台飞来一群麻雀。他撒面包屑时说："驯养就是每天三点钟见面呀！"我们给书里的点灯人配音，他扮国王叉着腰喊"小病号必须喝药"，我偷偷把止咳糖浆焐在怀里，等烫手心时才递给他："这是地理学家发现的温泉！"</p>
+                        <p>有次他举着输液袋陪我散步，塑料管在阳光里晃成金线。我说这像狐狸说的麦浪，他眼睛突然亮起来："等出院了，咱们在阳台种真正的麦子！"夜里他趴在床边打盹，手机屏保亮着我们爬山时的照片——他背着我，松枝在他头顶织成小王子的金色围巾。</p>
+                    </div>
+                    
+                    <div class="letter-section animate__animated animate__fadeIn">
+                        <h3>三、玫瑰与环形山的秘密</h3>
+                        <p>监护仪尖叫那晚，爸爸正读到小王子离开玫瑰。他突然攥紧我的手，老茧硌得我发疼："但飞行员永远记得B-612星球。"月光爬上他新冒的胡茬，我数着上面细小的反光点，突然发现他凌晨五点就起来温第八遍米汤，衬衫领口还沾着厨房的葱花。</p>
+                        <p>出院时他真搬来一盆玫瑰，深红花瓣上凝着晨露："要自己捉虫、盖玻璃罩，才会变成宇宙里唯一的花。"我悄悄把针管折成小王子的围巾插在土里——就像他不知道，我早发现他抚平书页折角时，总用指甲轻轻刮三下，那是我们爬山时的暗号："别怕，爸爸在。"</p>
+                    </div>
+                    
+                    <div class="letter-section animate__animated animate__fadeIn">
+                        <h3>四、朝着同一个方向生长</h3>
+                        <p>现在每次看星星，我都觉得是爸爸在讲故事。春风掀动蓝窗帘时，他蹲在玫瑰旁松土的背影，渐渐和书里守护星球的飞行员重叠。昨夜我发现他把输液管编成麦穗挂在窗前，底下压着张纸条："小狐狸说，驯养的东西要永远负责。"</p>
+                        <p>我的数学本扉页画着B-612星球，环形山上坐着拿棉签的国王。爸爸在批改时添了朵玫瑰，茎秆特意描成他掌心的茧纹。或许父爱就是这样的小行星——他用读书声筑成挡风的环形山，我把他的皱纹画成灌溉玫瑰的溪流，我们各自转动，却永远朝着同一个方向。</p>
+                    </div>
+                    
+                    <div class="letter-signature animate__animated animate__fadeIn">
+                        <p>永远爱你的kimi</p>
+                    </div>
+                </div>
+            </div>
+            <button id="restart-btn" class="button ripple-btn">
+                <i class="fas fa-redo"></i> 重新开始
+            </button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
